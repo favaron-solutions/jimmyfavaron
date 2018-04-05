@@ -1,23 +1,21 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap'
+import { Row } from 'reactstrap'
 
 export default class SocialBlurb extends React.Component {
   render() {
     return (
       <div>
         <Row>
-          <i className="fa fa-home">
-          </i>
-
-            <span> Home</span>
+          <a className="aStyle" href="https://github.com/jfavaron"><i className="fa fa-github"></i><span> Github </span></a>
         </Row>
-        <div className="blogRowSpacer">
-        </div>
         <Row>
-          <i className="fa fa-comment">
-          </i>
-
-            <span> About</span>
+          <a className="aStyle" href="https://www.linkedin.com/in/james-favaron-279a16ab/"><i className="fa fa-linkedin"></i><span> LinkedIn </span></a>
+        </Row>
+        <Row>
+          <a className="aStyle" href="http://www.github.com"><i className="fa fa-github"></i><span> Other Links </span></a>
+        </Row>
+        <Row>
+          <a className="aStyle" href="http://www.github.com"><i className="fa fa-github"></i><span> Cool Fun Stuff </span></a>
         </Row>
       </div>
     );

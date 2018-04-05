@@ -22,8 +22,12 @@ body {
   text-decoration: none;
 }
 
+.aStyle:hover {
+  text-decoration: none;
+}
+
 .hrStyle {
-  border-top: 7px solid #555;
+  border-top: 5px solid #555;
 }
 
 /* Added by for Hamburger Menu below
