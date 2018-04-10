@@ -7,12 +7,15 @@ export default class CodeChart extends React.Component {
   render() {
     return (
       <div>
+        <h4>Coding Skillset</h4>
         <BarChart
           data={[
-              {x: 'NodeJS', y: 90, color: '#555'},
-              {x: 'ReactJS', y: 85, color: '#555'},
-              {x: 'PHP', y: 90, color: '#555'},
-              {x: 'CakePHP', y: 80, color: '#555'}
+              {x: 'NodeJS', y: 80, color: '#555'},
+              {x: 'ReactJS', y: 90, color: '#555'},
+              {x: 'jQuery', y: 85, color: '#555'},
+              {x: 'CakePHP', y: 80, color: '#555'},
+              {x: 'PHP', y: 95, color: '#555'},
+              {x: 'MySQL', y: 85, color: '#555'}              
           ]}
           axes
           grid

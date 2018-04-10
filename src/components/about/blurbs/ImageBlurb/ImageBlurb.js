@@ -4,7 +4,7 @@ import jimmy from '../../../../assets/jimmy.jpeg';
 export default class ImageBlurb extends React.Component {
   render() {
     return (
-      <div>
+      <div className="image-blurb">
         <img src={jimmy}/>
       </div>
     );

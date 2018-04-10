@@ -37,6 +37,20 @@ body {
   margin-bottom: 10px;
 }
 
+.image-blurb {
+  padding-bottom: 15px;
+}
+.social-blurb {
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.icon-spacer {
+  padding-left: 5px;
+}
+.icon-spacer {
+  padding-right: 10px;
+}
 /* Added by for Hamburger Menu below
 
 /* Position and sizing of burger button */

@@ -4,14 +4,14 @@ import { Container, Row, Col } from 'reactstrap';
 import BootstrapPlain from '../../../assets/logos/bootstrap/plain/BootstrapPlain.svg';
 import Css3Plain from '../../../assets/logos/css3/plain/Css3Plain.svg';
 import Html5Plain from '../../../assets/logos/html5/plain/Html5Plain.svg';
-import SketchLine from '../../../assets/logos/sketch/line/SketchLine.svg';
+import SketchLine from '../../../assets/logos/sketch/original/SketchOriginal.svg';
 
 export default class Layout extends React.Component {
   render() {
     return (
     <div className="icon-group">
       <h4> Layout </h4>
-      <Row>
+      <Row className="d-flex justify-content-center">
         <Col sm={3}>
           <img id="BootstrapPlain" src={BootstrapPlain} className="App-logo" alt="logo" />
           <label for="BootstrapPlain" className="d-flex justify-content-center">Bootstrap</label>

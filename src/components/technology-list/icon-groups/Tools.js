@@ -1,32 +1,32 @@
 import React from 'react';
 import Divider from '../../divider/Divider.js';
 import { Container, Row, Col } from 'reactstrap';
-import BootstrapPlain from '../../../assets/logos/bootstrap/plain/BootstrapPlain.svg';
-import Css3Plain from '../../../assets/logos/css3/plain/Css3Plain.svg';
-import Html5Plain from '../../../assets/logos/html5/plain/Html5Plain.svg';
-import SketchLine from '../../../assets/logos/sketch/line/SketchLine.svg';
+import GithubOriginal from '../../../assets/logos/github/original/GithubOriginal.svg';
+import GitOriginal from '../../../assets/logos/git/original/GitOriginal.svg';
+import NpmOriginal from '../../../assets/logos/npm/original-wordmark/NpmOriginalWordmark.svg';
+import PhpstormPlain from '../../../assets/logos/phpstorm/plain/PhpstormPlain.svg';
 
 export default class Tools extends React.Component {
   render() {
     return (
     <div className="icon-group">
       <h4> Tools </h4>
-      <Row>
+      <Row className="d-flex justify-content-center">
         <Col sm={3}>
-          <img id="BootstrapPlain" src={BootstrapPlain} className="App-logo" alt="logo" />
-          <label for="BootstrapPlain" className="d-flex justify-content-center">Bootstrap</label>
+          <img id="GithubOriginal" src={GithubOriginal} className="App-logo" alt="logo" />
+          <label for="GithubOriginal" className="d-flex justify-content-center">Github</label>
         </Col>
         <Col sm={3}>
-          <img id="Css3Plain" src={Css3Plain} className="App-logo" alt="logo" />
-          <label for="Css3Plain" className="d-flex justify-content-center">CSS3</label>
+          <img id="GitOriginal" src={GitOriginal} className="App-logo" alt="logo" />
+          <label for="GitOriginal" className="d-flex justify-content-center">Git</label>
         </Col>
         <Col sm={3}>
-          <img id="Html5Plain" src={Html5Plain} className="App-logo" alt="logo" />
-          <label for="Html5Plain" className="d-flex justify-content-center">HTML5</label>
+          <img id="NpmOriginal" src={NpmOriginal} className="App-logo" alt="logo" />
+          <label for="NpmOriginal" className="d-flex justify-content-center">npm</label>
         </Col>
         <Col sm={3}>
-          <img id="SketchLine" src={SketchLine} className="App-logo" alt="logo" />
-          <label for="SketchLine" className="d-flex justify-content-center">Sketch</label>
+          <img id="PhpstormPlain" src={PhpstormPlain} className="App-logo" alt="logo" />
+          <label for="PhpstormPlain" className="d-flex justify-content-center">PhpStorm</label>
         </Col>
       </Row>
     </div>

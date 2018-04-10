@@ -4,7 +4,7 @@ import { Row } from 'reactstrap'
 export default class SocialBlurb extends React.Component {
   render() {
     return (
-      <div>
+      <div className="social-blurb">
         <Row>
           <a className="aStyle" href="https://github.com/jfavaron"><i className="fa fa-github"></i><span> Github </span></a>
         </Row>
@@ -12,10 +12,10 @@ export default class SocialBlurb extends React.Component {
           <a className="aStyle" href="https://www.linkedin.com/in/james-favaron-279a16ab/"><i className="fa fa-linkedin"></i><span> LinkedIn </span></a>
         </Row>
         <Row>
-          <a className="aStyle" href="http://www.github.com"><i className="fa fa-github"></i><span> Other Links </span></a>
+          <i className="fa fa-envelope icon-space"></i><span className="icon-spacer"> jimmyfavaron@gmail.com </span>
         </Row>
         <Row>
-          <a className="aStyle" href="http://www.github.com"><i className="fa fa-github"></i><span> Cool Fun Stuff </span></a>
+          <i className="fa fa-phone icon-space"></i><span className="icon-spacer"> (830) 928-4747 </span>
         </Row>
       </div>
     );

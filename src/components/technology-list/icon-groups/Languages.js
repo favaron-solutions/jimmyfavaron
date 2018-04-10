@@ -1,32 +1,32 @@
 import React from 'react';
 import Divider from '../../divider/Divider.js';
 import { Container, Row, Col } from 'reactstrap';
-import BootstrapPlain from '../../../assets/logos/bootstrap/plain/BootstrapPlain.svg';
-import Css3Plain from '../../../assets/logos/css3/plain/Css3Plain.svg';
-import Html5Plain from '../../../assets/logos/html5/plain/Html5Plain.svg';
-import SketchLine from '../../../assets/logos/sketch/line/SketchLine.svg';
+import JavascriptOriginal from '../../../assets/logos/javascript/original/JavascriptOriginal.svg';
+import NodejsOriginal from '../../../assets/logos/nodejs/original/NodejsOriginal.svg';
+import PhpPlain from '../../../assets/logos/php/plain/PhpPlain.svg';
+import MySqlOriginal from '../../../assets/logos/mysql/original/MysqlOriginal.svg';
 
 export default class Languages extends React.Component {
   render() {
     return (
     <div className="icon-group">
       <h4> Languages </h4>
-      <Row>
+      <Row className="d-flex justify-content-center">
         <Col sm={3}>
-          <img id="BootstrapPlain" src={BootstrapPlain} className="App-logo" alt="logo" />
-          <label for="BootstrapPlain" className="d-flex justify-content-center">Bootstrap</label>
+          <img id="JavascriptOriginal" src={JavascriptOriginal} className="App-logo" alt="logo" />
+          <label for="JavascriptOriginal" className="d-flex justify-content-center">Javascript</label>
         </Col>
         <Col sm={3}>
-          <img id="Css3Plain" src={Css3Plain} className="App-logo" alt="logo" />
-          <label for="Css3Plain" className="d-flex justify-content-center">CSS3</label>
+          <img id="NodejsOriginal" src={NodejsOriginal} className="App-logo" alt="logo" />
+          <label for="NodejsOriginal" className="d-flex justify-content-center">NodeJS</label>
         </Col>
         <Col sm={3}>
-          <img id="Html5Plain" src={Html5Plain} className="App-logo" alt="logo" />
-          <label for="Html5Plain" className="d-flex justify-content-center">HTML5</label>
+          <img id="PhpPlain" src={PhpPlain} className="App-logo" alt="logo" />
+          <label for="PhpPlain" className="d-flex justify-content-center">Php</label>
         </Col>
         <Col sm={3}>
-          <img id="SketchLine" src={SketchLine} className="App-logo" alt="logo" />
-          <label for="SketchLine" className="d-flex justify-content-center">Sketch</label>
+          <img id="MySqlOriginal" src={MySqlOriginal} className="App-logo" alt="logo" />
+          <label for="MySqlOriginal" className="d-flex justify-content-center">MySQL</label>
         </Col>
       </Row>
     </div>
