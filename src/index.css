@@ -30,6 +30,13 @@ body {
   border-top: 5px solid #555;
 }
 
+.icon-group {
+  padding: 25px;
+  border-style: solid;
+  border-width: 3px;
+  margin-bottom: 10px;
+}
+
 /* Added by for Hamburger Menu below
 
 /* Position and sizing of burger button */
