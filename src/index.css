@@ -16,6 +16,12 @@ h3 {
   padding: 150px;
 }
 
+@media only screen and (max-width: 1000px) {
+    h3 {
+        padding: 30px;
+    }
+}
+
 .inverse-subtitle {
   color: white;
 }
