@@ -3,9 +3,9 @@ import Divider from '../divider/Divider.js';
 import { Container, Card, Button, CardImg, CardTitle, CardText, CardColumns,
  CardSubtitle, CardBody } from 'reactstrap';
 import PageTitle from '../header/page-title/PageTitle.js';
-import flappyRaider from "../../assets/flappyRaider.png";
-import favaronTechnology from "../../assets/favaronTechnology.png";
-import zabesCorner from "../../assets/zabesCorner.png";
+import flappyRaider from "../../assets/flappyRaider.jpg";
+import favaronTechnology from "../../assets/favaronTechnology.jpg";
+import zabesCorner from "../../assets/zabesCorner.jpg";
 import homeAssistant from "../../assets/homeAssistant.png";
 import magicMirror from "../../assets/magicMirror.jpg";
 import jimmyFavaron from "../../assets/jimmyFavaron.PNG";
