@@ -8,6 +8,7 @@ import favaronTechnology from "../../assets/favaronTechnology.png";
 import zabesCorner from "../../assets/zabesCorner.png";
 import homeAssistant from "../../assets/homeAssistant.png";
 import magicMirror from "../../assets/magicMirror.jpg";
+import jimmyFavaron from "../../assets/jimmyFavaron.PNG";
 
 export default class ProjectsBody extends React.Component {
   render() {
@@ -16,15 +17,25 @@ export default class ProjectsBody extends React.Component {
         <PageTitle pageTitle={this.props.pageTitle}/>
         <Divider/>
           <CardColumns>
+          <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+            <CardImg top width="100%" src={jimmyFavaron} alt="Card image cap" />
+            <CardBody>
+              <CardTitle>jimmyfavaron.com</CardTitle>
+              <CardSubtitle className="inverse-subtitle">Website, Serverless, ReactJs, React Router, Reactstrap</CardSubtitle>
+              <CardText>This was my first fully React and serverless website. Built as a showcase and resume site.</CardText>
+              <a href="http://www.jimmyfavaron.com"><Button> Home </Button></a>
+            </CardBody>
+          </Card>
         <Card>
           <CardImg top width="100%" src={flappyRaider} alt="Card image cap" />
           <CardBody>
             <CardTitle>Flappy Raider</CardTitle>
             <CardSubtitle>Website, Serverless, Bootstrap</CardSubtitle>
-            <CardText>This was my first adventure into making an HTML5 video game. Phaser was used for the gravity engine. </CardText>
+            <CardText>This was my first adventure into making an HTML5 video game. Phaser was used for the gravity engine. (Use spacebar to jump!) </CardText>
             <a href="https://s3.amazonaws.com/aws-website-flappyraider-xn8hn/index.html"><Button> View </Button></a>
           </CardBody>
         </Card>
+
         <Card>
           <CardImg top width="100%" src={favaronTechnology} alt="Card image cap" />
           <CardBody>
