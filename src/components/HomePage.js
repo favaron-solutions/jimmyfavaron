@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './header/Header.js'
-import Divider from './divider/Divider.js'
 import HomeBody from './home/HomeBody.js';
 
 export default class HomePage extends React.Component {

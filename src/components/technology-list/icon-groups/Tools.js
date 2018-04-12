@@ -1,6 +1,5 @@
 import React from 'react';
-import Divider from '../../divider/Divider.js';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import GithubOriginal from '../../../assets/logos/github/original/GithubOriginal.svg';
 import GitOriginal from '../../../assets/logos/git/original/GitOriginal.svg';
 import NpmOriginal from '../../../assets/logos/npm/original-wordmark/NpmOriginalWordmark.svg';

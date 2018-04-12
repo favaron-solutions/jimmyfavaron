@@ -1,6 +1,5 @@
 import React from 'react';
-import Divider from '../../divider/Divider.js';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import Slack from '../../../assets/logos/slack/plain/SlackPlain.svg';
 import Twitter from '../../../assets/logos/twitter/original/TwitterOriginal.svg';
 import Google from '../../../assets/logos/google/original/GoogleOriginal.svg';

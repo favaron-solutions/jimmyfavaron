@@ -1,12 +1,16 @@
 import React from 'react';
 import Header from './header/Header.js'
-import Divider from './divider/Divider.js'
-import { Container, Row, Col } from 'reactstrap'
+import ProjectsBody from './projects/ProjectsBody.js'
 
 export default class ProjectsPage extends React.Component {
   render() {
     return (
-      <hr/>
+      <div>
+        <Header pageTitle={this.props.pageTitle}/>
+        <body>
+          <ProjectsBody/>
+        </body>
+      </div>
     );
   }
 }

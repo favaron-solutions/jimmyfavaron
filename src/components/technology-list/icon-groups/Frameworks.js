@@ -1,6 +1,5 @@
 import React from 'react';
-import Divider from '../../divider/Divider.js';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import ReactJS from '../../../assets/logos/react/original/ReactOriginal.svg';
 import Jquery from '../../../assets/logos/jquery/plain/JqueryPlain.svg';
 import CakePHP from '../../../assets/logos/cakephp/original/CakephpOriginal.svg';

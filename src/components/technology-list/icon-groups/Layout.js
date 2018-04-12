@@ -1,6 +1,5 @@
 import React from 'react';
-import Divider from '../../divider/Divider.js';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import BootstrapPlain from '../../../assets/logos/bootstrap/plain/BootstrapPlain.svg';
 import Css3Plain from '../../../assets/logos/css3/plain/Css3Plain.svg';
 import Html5Plain from '../../../assets/logos/html5/plain/Html5Plain.svg';

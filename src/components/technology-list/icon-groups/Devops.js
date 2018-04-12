@@ -1,6 +1,5 @@
 import React from 'react';
-import Divider from '../../divider/Divider.js';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import AmazonOriginal from '../../../assets/logos/amazonwebservices/original/AmazonwebservicesOriginal.svg';
 import Docker from '../../../assets/logos/docker/original/DockerOriginal.svg';
 import Ubuntu from '../../../assets/logos/ubuntu/plain/UbuntuPlain.svg';

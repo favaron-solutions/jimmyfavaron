@@ -5,7 +5,7 @@ export default class ImageBlurb extends React.Component {
   render() {
     return (
       <div className="image-blurb">
-        <img src={jimmy}/>
+        <img src={jimmy} alt=""/>
       </div>
     );
   }
