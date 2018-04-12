@@ -8,7 +8,7 @@ export default class BlogPage extends React.Component {
       <div>
         <Navigation/>
         <body>
-          <BlogBody/>
+          <BlogBody pageTitle={this.props.pageTitle}/>
         </body>
       </div>
     );

@@ -8,7 +8,7 @@ export default class HomePage extends React.Component {
       <div>
         <Navigation/>
         <body>
-          <HomeBody/>
+          <HomeBody pageTitle={this.props.pageTitle}/>
         </body>
       </div>
     );

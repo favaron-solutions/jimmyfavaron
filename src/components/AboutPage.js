@@ -8,7 +8,7 @@ export default class AboutPage extends React.Component {
       <div>
         <Navigation/>
         <body>
-          <AboutBody/>
+          <AboutBody pageTitle={this.props.pageTitle}/>
         </body>
       </div>
     );

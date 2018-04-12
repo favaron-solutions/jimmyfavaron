@@ -24,7 +24,7 @@ class App extends Component {
                     <ProjectsPage pageTitle="Projects"/>
               )}/>
               <Route path="/aboutSite" render={() => (
-                    <ProjectsPage pageTitle="Projects"/>
+                    <ProjectsPage pageTitle="About This Site"/>
               )}/>
           </div>
         </Router>

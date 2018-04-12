@@ -8,7 +8,7 @@ export default class ProjectsPage extends React.Component {
       <div>
         <Navigation/>
         <body>
-          <ProjectsBody/>
+          <ProjectsBody pageTitle={this.props.pageTitle}/>
         </body>
       </div>
     );
