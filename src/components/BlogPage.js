@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from './header/Header.js'
+import Navigation from './header/Navigation.js'
 import BlogBody from './blog/BlogBody.js'
 
 export default class BlogPage extends React.Component {
   render() {
     return (
       <div>
-        <Header pageTitle={this.props.pageTitle}/>
+        <Navigation/>
         <body>
           <BlogBody/>
         </body>

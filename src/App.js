@@ -23,6 +23,9 @@ class App extends Component {
               <Route path="/projects" render={() => (
                     <ProjectsPage pageTitle="Projects"/>
               )}/>
+              <Route path="/aboutSite" render={() => (
+                    <ProjectsPage pageTitle="Projects"/>
+              )}/>
           </div>
         </Router>
     );
