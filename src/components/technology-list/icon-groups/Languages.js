@@ -11,19 +11,19 @@ export default class Languages extends React.Component {
     <div className="icon-group">
       <h4> Languages </h4>
       <Row className="d-flex justify-content-center">
-        <Col sm={3}>
+        <Col xs={3}>
           <img id="JavascriptOriginal" src={JavascriptOriginal} className="App-logo" alt="logo" />
           <label for="JavascriptOriginal" className="d-flex justify-content-center">Javascript</label>
         </Col>
-        <Col sm={3}>
+        <Col xs={3}>
           <img id="NodejsOriginal" src={NodejsOriginal} className="App-logo" alt="logo" />
           <label for="NodejsOriginal" className="d-flex justify-content-center">NodeJS</label>
         </Col>
-        <Col sm={3}>
+        <Col xs={3}>
           <img id="PhpPlain" src={PhpPlain} className="App-logo" alt="logo" />
           <label for="PhpPlain" className="d-flex justify-content-center">Php</label>
         </Col>
-        <Col sm={3}>
+        <Col xs={3}>
           <img id="MySqlOriginal" src={MySqlOriginal} className="App-logo" alt="logo" />
           <label for="MySqlOriginal" className="d-flex justify-content-center">MySQL</label>
         </Col>

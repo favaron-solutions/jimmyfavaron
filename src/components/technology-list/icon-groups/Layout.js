@@ -11,19 +11,19 @@ export default class Layout extends React.Component {
     <div className="icon-group">
       <h4> Layout </h4>
       <Row className="d-flex justify-content-center">
-        <Col sm={3}>
+        <Col xs={3}>
           <img id="BootstrapPlain" src={BootstrapPlain} className="App-logo" alt="logo" />
           <label for="BootstrapPlain" className="d-flex justify-content-center">Bootstrap</label>
         </Col>
-        <Col sm={3}>
+        <Col xs={3}>
           <img id="Css3Plain" src={Css3Plain} className="App-logo" alt="logo" />
           <label for="Css3Plain" className="d-flex justify-content-center">CSS3</label>
         </Col>
-        <Col sm={3}>
+        <Col xs={3}>
           <img id="Html5Plain" src={Html5Plain} className="App-logo" alt="logo" />
           <label for="Html5Plain" className="d-flex justify-content-center">HTML5</label>
         </Col>
-        <Col sm={3}>
+        <Col xs={3}>
           <img id="SketchLine" src={SketchLine} className="App-logo" alt="logo" />
           <label for="SketchLine" className="d-flex justify-content-center">Sketch</label>
         </Col>

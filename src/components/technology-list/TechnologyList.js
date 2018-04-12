@@ -13,10 +13,10 @@ export default class TechnologyList extends React.Component {
     return (
       <div>
         <Row>
-          <Col md={6}>
+          <Col xs={12} md={6}>
               <Frameworks/>
           </Col>
-          <Col md={6}>
+          <Col xs={12} md={6}>
               <Languages/>
           </Col>
         </Row>
