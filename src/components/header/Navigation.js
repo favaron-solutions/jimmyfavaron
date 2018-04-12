@@ -26,19 +26,19 @@ export default class Navigation extends React.Component {
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <Link to='/'>Home</Link>;
+                <NavLink tag={Link} to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <Link to='/about'>About Me</Link>;
+                <NavLink tag={Link} to="/about">About Me</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/blog">My Blog</NavLink>
+                <NavLink tag={Link} to="/blog">My Blog</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/projects">Projects</NavLink>
+                <NavLink tag={Link} to="/projects">Projects</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/aboutSite">About This Site</NavLink>
+                <NavLink tag={Link} to="/aboutSite">About This Site</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
