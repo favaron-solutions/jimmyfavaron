@@ -1,5 +1,5 @@
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 export default class Navigation extends React.Component {
@@ -26,19 +26,19 @@ export default class Navigation extends React.Component {
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink tag={Link} to="/">Home</NavLink>
+                <Link to="/">Home</Link>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/about">About Me</NavLink>
+                <Link to="/about">About Me</Link>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/blog">My Blog</NavLink>
+                <Link to="/blog">My Blog</Link>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/projects">Projects</NavLink>
+                <Link to="/projects">Projects</Link>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/aboutSite">About This Site</NavLink>
+                <Link to="/aboutSite">About This Site</Link>
               </NavItem>
             </Nav>
           </Collapse>
