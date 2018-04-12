@@ -5,7 +5,7 @@ import AboutPage from './components/AboutPage.js'
 import BlogPage from './components/BlogPage.js'
 import ProjectsPage from './components/ProjectsPage.js'
 import AboutSitePage from './components/AboutSitePage.js';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route} from 'react-router-dom'
 
 class App extends Component {
   render() {
