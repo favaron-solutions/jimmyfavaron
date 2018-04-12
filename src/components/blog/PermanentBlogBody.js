@@ -10,10 +10,18 @@ export default class BlogBody extends React.Component {
       <Container>
         <PageTitle pageTitle={this.props.pageTitle}/>
         <Divider/>
-        <div className="d-flex justify-content-center">
-        <p className="comingSoon">Coming Soon</p>
+        <Row>
+          <Col xs={12} md={4}><Post /></Col>
+          <Col xs={12} md={4}><Post /></Col>
+          <Col xs={12} md={4}><Post /></Col>
+        </Row>
+        <div className="blogRowSpacer">
         </div>
-        <Divider/>
+        <Row>
+          <Col xs={12} md={4}><Post /></Col>
+          <Col xs={12} md={4}><Post /></Col>
+          <Col xs={12} md={4}><Post /></Col>
+        </Row>
       </Container>
     );
   }

@@ -12,8 +12,8 @@ export default class AboutBody extends React.Component {
         <PageTitle pageTitle={this.props.pageTitle}/>
         <Divider/>
         <Blurbs/>
-        <Divider/>
         <TechnologyList/>
+        <Divider/>
       </Container>
     );
   }

@@ -11,6 +11,7 @@ export default class HomeBody extends React.Component {
         <PageTitle pageTitle={this.props.pageTitle}/>
         <Divider/>
         <Welcome/>
+        <Divider/>
       </Container>
     );
   }

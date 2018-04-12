@@ -4,6 +4,7 @@ import HomePage from './components/HomePage.js'
 import AboutPage from './components/AboutPage.js'
 import BlogPage from './components/BlogPage.js'
 import ProjectsPage from './components/ProjectsPage.js'
+import AboutSitePage from './components/AboutSitePage.js';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
@@ -24,7 +25,7 @@ class App extends Component {
                     <ProjectsPage pageTitle="Projects"/>
               )}/>
               <Route path="/aboutSite" render={() => (
-                    <ProjectsPage pageTitle="About This Site"/>
+                    <AboutSitePage pageTitle="About This Site"/>
               )}/>
           </div>
         </Router>

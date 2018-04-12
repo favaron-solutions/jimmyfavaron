@@ -1,8 +1,7 @@
 import React from 'react';
 import Divider from '../divider/Divider.js';
-import { Container, Row, Col } from 'reactstrap';
-import Post from '../blog/Post.js'
-import PageTitle from '../header/page-title/PageTitle.js'
+import { Container } from 'reactstrap';
+import PageTitle from '../header/page-title/PageTitle.js';
 
 export default class ProjectsBody extends React.Component {
   render() {
@@ -10,18 +9,10 @@ export default class ProjectsBody extends React.Component {
       <Container>
         <PageTitle pageTitle={this.props.pageTitle}/>
         <Divider/>
-        <Row>
-          <Col xs={12} md={4}><Post /></Col>
-          <Col xs={12} md={4}><Post /></Col>
-          <Col xs={12} md={4}><Post /></Col>
-        </Row>
-        <div className="blogRowSpacer">
+        <div className="d-flex justify-content-center">
+        <p className="comingSoon">Coming Soon</p>
         </div>
-        <Row>
-          <Col xs={12} md={4}><Post /></Col>
-          <Col xs={12} md={4}><Post /></Col>
-          <Col xs={12} md={4}><Post /></Col>
-        </Row>
+        <Divider/>
       </Container>
     );
   }

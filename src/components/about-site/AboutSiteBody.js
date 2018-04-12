@@ -1,19 +1,18 @@
 import React from 'react';
 import Divider from '../divider/Divider.js';
-import Blurbs from './blurbs/Blurbs.js';
 import { Container } from 'reactstrap';
-import TechnologyList from '../technology-list/TechnologyList.js';
 import PageTitle from '../header/page-title/PageTitle.js';
 
-export default class AboutBody extends React.Component {
+export default class AboutSiteBody extends React.Component {
   render() {
     return (
       <Container>
         <PageTitle pageTitle={this.props.pageTitle}/>
         <Divider/>
-        <Blurbs/>
+        <div className="d-flex justify-content-center">
+        <p className="comingSoon">Coming Soon</p>
+        </div>
         <Divider/>
-        <TechnologyList/>
       </Container>
     );
   }
