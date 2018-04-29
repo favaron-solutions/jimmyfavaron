@@ -23,7 +23,7 @@ export default class ProjectsBody extends React.Component {
             <CardBody>
               <CardTitle>Scratch</CardTitle>
               <CardSubtitle className="inverse-subtitle">Website, Serverless Framework, ReactJs, React Router, Reactstrap</CardSubtitle>
-              <CardText>Simple note taking app using the serverless framework to host a static ReactJS App with a serverless NodeJS backend. Create an account and take some notes yourself!</CardText>
+              <CardText>Simple note taking app using the serverless framework with a NodeJS backend. Scratch is completely responsive and will work on any device. Create an account and take some notes yourself!</CardText>
               <a href="http://d32ugifdwq37wt.cloudfront.net/"><Button> View </Button></a>
             </CardBody>
           </Card>
