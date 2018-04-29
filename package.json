@@ -1,5 +1,5 @@
 {
-  "name": "thirty",
+  "name": "jimmyfavaron",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,14 +18,17 @@
     "react-easy-chart": "^1.0.0",
     "react-fontawesome": "^1.6.1",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
     "react-svg-inline": "^2.1.0",
-    "reactstrap": "^5.0.0-beta.2"
+    "reactstrap": "^5.0.0-beta.2",
+    "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "aws s3 sync build/ s3://jimmyfavaron.com --delete",
+    "postdeploy": "aws cloudfront create-invalidation --distribution-id E2LEEGSMQQIZC5 --paths '/*' && aws cloudfront create-invalidation --distribution-id E1Z9JAATCDZSDH --paths '/*'",
     "eject": "react-scripts eject"
   }
 }
