@@ -12,10 +12,19 @@ resource "aws_acm_certificate" "ssl_certificate" {
   }
 }
 
+# # Uncomment the validation_record_fqdns line if you do DNS validation instead of Email.
+# resource "aws_acm_certificate_validation" "cert_validation" {
+#   certificate_arn = aws_acm_certificate.ssl_certificate.arn
+#   validation_record_fqdns = aws_route53_record.cert-validations.*.fqdn
+
+#   timeouts {
+#     create = "120m"
+#   }
+# }
+
 # Uncomment the validation_record_fqdns line if you do DNS validation instead of Email.
 resource "aws_acm_certificate_validation" "cert_validation" {
   certificate_arn = aws_acm_certificate.ssl_certificate.arn
-  validation_record_fqdns = aws_route53_record.cert-validations.*.fqdn
 
   timeouts {
     create = "120m"
