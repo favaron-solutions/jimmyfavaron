@@ -29,8 +29,8 @@ resource "aws_route53_record" "www-a" {
 
 
 resource "aws_route53_record" "cert-validations" {
-  count = length(aws_acm_certificate.ssl_certificate.domain_validation_options)
-
+#   count = length(aws_acm_certificate.ssl_certificate.domain_validation_options)
+  count = length(var.alternative-names) + 1
   zone_id = aws_route53_zone.main.zone_id
   name    = element(aws_acm_certificate.ssl_certificate.domain_validation_options.*.resource_record_name, count.index)
   type    = element(aws_acm_certificate.ssl_certificate.domain_validation_options.*.resource_record_type, count.index)
