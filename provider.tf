@@ -7,13 +7,13 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "favatf"
+    bucket = "fava-tf-backend"
     key = "dev/terraform.tfstate"
-    region = "us-west-2"
+    region = "us-east-1"
   }
 }
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
