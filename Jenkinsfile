@@ -22,7 +22,8 @@ pipeline {
     stage('install terraform') {
       steps {
         sh 'ls /etc/apt/sources.list.d'
-        sh 'add-apt-repository -r /etc/apt/sources.list.d/nodesource.list'
+        sh 'rm /etc/apt/sources.list.d/nodesource.list'
+        sh 'ls /etc/apt/sources.list.d'
         sh 'apt-get update && apt-get install -y gnupg software-properties-common curl'
         sh 'curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -'
         sh 'apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"'
