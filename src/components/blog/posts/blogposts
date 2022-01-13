@@ -1,0 +1,14 @@
+export default [
+    {
+        postTitle: "Frigate",
+        postSubtitle: "Self-hosted, NVR, Object Detection",
+        postText: "Frigate is a self hosted application leveraging IP feeds from cameras on the local network. It has the ability to send screenshots to a Coral TPU for object recognition and detection.",
+        postImage: "../../assets/frigatebackyard.png"
+    },
+    {
+        postTitle: "Home Assistant",
+        postSubtitle: "Home Automation",
+        postText: "Home assistant helps with home automation",
+        postImage: "../../assets/frigatebackyard.png"
+    }
+]

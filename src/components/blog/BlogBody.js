@@ -7,11 +7,11 @@ export default class BlogBody extends React.Component {
   render() {
     return (
       <Container>
-        <PageTitle pageTitle={this.props.pageTitle}/>
+        <PageTitle pageTitle={this.props.pageTitle} />
         <Divider/>
-        <div className="d-flex justify-content-center">
-        <p className="comingSoon">Coming Soon</p>
-        </div>
+          <div className="d-flex justify-content-center">
+          <p className="comingSoon">Coming Soon</p>
+          </div>
         <Divider/>
       </Container>
     );

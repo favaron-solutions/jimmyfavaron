@@ -5,12 +5,11 @@ export default class Welcome extends React.Component {
     return (
       <div>
         <div>
-          <h3 className="d-flex justify-content-center h3Center"> Welcome to my corner of the internet. </h3>
-          <h4> Enjoy learning a little bit more about me, the projects I work on, and the things I like to write about. </h4>
+          <br></br>
+          <h3 className="d-flex justify-content-center"> Welcome to my corner of the internet. </h3>
+          <h4 className="d-flex justify-content-center"> Enjoy learning a little bit more about me and the projects I work on.</h4>
+          <br></br>
         </div>
-        <div>
-          
-        </div>      
       </div>
     );
   }
