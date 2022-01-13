@@ -36,9 +36,17 @@ pipeline {
     stage('Build React App') {
       steps {
         sh '''
-          curl -fsSL https://deb.nodesource.com/setup_16.x | -E bash -
-          apt-get install -y nodejs
-          npm run build
+          VERSION=node_8.x
+          KEYRING=/usr/share/keyrings/nodesource.gpg
+          # The below command will set this correctly, but if lsb_release isn't available, you can set it manually:
+          # - For Debian distributions: jessie, sid, etc...
+          # - For Ubuntu distributions: xenial, bionic, etc...
+          # - For Debian or Ubuntu derived distributions your best option is to use the codename corresponding to the upstream release your distribution is based off. This is an advanced scenario and unsupported if your distribution is not listed as supported per earlier in this README.
+          DISTRO="$(lsb_release -s -c)"
+          echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | tee /etc/apt/sources.list.d/nodesource.list
+          echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | tee -a /etc/apt/sources.list.d/nodesource.list
+          apt-get update
+          apt-get install nodejs
         '''
       }
     }
