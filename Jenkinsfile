@@ -27,11 +27,19 @@ pipeline {
         sh 'apt-get update && apt-get install terraform'
       }
     }
-
     stage('use terraform') {
       steps {
         sh 'terraform init -no-color'
         sh 'terraform apply -auto-approve -no-color'
+      }
+    }
+    stage('Build React App') {
+      steps {
+        sh '''
+          curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+          apt-get install -y nodejs
+          npm run build
+        '''
       }
     }
   }
