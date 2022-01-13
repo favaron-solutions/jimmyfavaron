@@ -33,29 +33,29 @@ pipeline {
         sh 'terraform apply -auto-approve -no-color'
       }
     }
-    stage('Build React App') {
-      steps {
-        sh '''
-          KEYRING=/usr/share/keyrings/nodesource.gpg
-          curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee "$KEYRING" >/dev/null
-          # wget can also be used:
-          # wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee "$KEYRING" >/dev/null
-          gpg --no-default-keyring --keyring "$KEYRING" --list-keys
+    // stage('Build React App') {
+    //   steps {
+    //     sh '''
+    //       KEYRING=/usr/share/keyrings/nodesource.gpg
+    //       curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee "$KEYRING" >/dev/null
+    //       # wget can also be used:
+    //       # wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee "$KEYRING" >/dev/null
+    //       gpg --no-default-keyring --keyring "$KEYRING" --list-keys
 
-          VERSION=node_8.x
-          KEYRING=/usr/share/keyrings/nodesource.gpg
-          # The below command will set this correctly, but if lsb_release isn't available, you can set it manually:
-          # - For Debian distributions: jessie, sid, etc...
-          # - For Ubuntu distributions: xenial, bionic, etc...
-          # - For Debian or Ubuntu derived distributions your best option is to use the codename corresponding to the upstream release your distribution is based off. This is an advanced scenario and unsupported if your distribution is not listed as supported per earlier in this README.
-          DISTRO="$(lsb_release -s -c)"
-          echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | tee /etc/apt/sources.list.d/nodesource.list
-          echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | tee -a /etc/apt/sources.list.d/nodesource.list
-          apt-get update
-          apt-get install nodejs
-        '''
-      }
-    }
+    //       VERSION=node_8.x
+    //       KEYRING=/usr/share/keyrings/nodesource.gpg
+    //       # The below command will set this correctly, but if lsb_release isn't available, you can set it manually:
+    //       # - For Debian distributions: jessie, sid, etc...
+    //       # - For Ubuntu distributions: xenial, bionic, etc...
+    //       # - For Debian or Ubuntu derived distributions your best option is to use the codename corresponding to the upstream release your distribution is based off. This is an advanced scenario and unsupported if your distribution is not listed as supported per earlier in this README.
+    //       DISTRO="$(lsb_release -s -c)"
+    //       echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | tee /etc/apt/sources.list.d/nodesource.list
+    //       echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | tee -a /etc/apt/sources.list.d/nodesource.list
+    //       apt-get update
+    //       apt-get install nodejs
+    //     '''
+    //   }
+    // }
   }
   post {
     always {
