@@ -1,11 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
-import Layout from './icon-groups/Layout.js';
+import Cloud from './icon-groups/Cloud.js';
 import Languages from './icon-groups/Languages.js';
-import Tools from './icon-groups/Tools.js';
-import Apis from './icon-groups/Apis.js';
-import Devops from './icon-groups/Devops.js';
-import Frameworks from './icon-groups/Frameworks.js';
+import OperatingSystems from './icon-groups/OperatingSystems.js';
 
 
 export default class TechnologyList extends React.Component {
@@ -13,27 +10,18 @@ export default class TechnologyList extends React.Component {
     return (
       <div>
         <Row>
-          <Col xs={12} md={6}>
-              <Frameworks/>
+          <Col sm={12} md={12}>
+              <Cloud/>
           </Col>
-          <Col xs={12} md={6}>
+        </Row>
+        <Row>
+          <Col sm={12} md={12}>
+              <OperatingSystems/>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} md={12}>
               <Languages/>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={12} md={6}>
-              <Devops/>
-          </Col>
-          <Col sm={12} md={6}>
-              <Layout/>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={12} md={6}>
-              <Tools/>
-          </Col>
-          <Col sm={12} md={6}>
-              <Apis/>
           </Col>
         </Row>
       </div>

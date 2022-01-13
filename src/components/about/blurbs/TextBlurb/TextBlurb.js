@@ -8,17 +8,16 @@ export default class TextBlurb extends React.Component {
         Hey.
         <br></br>
         <br></br>
-        My name is Jimmy and I am a creator, fixer, and dreamer.
+        My name is Jimmy and I am a creator, developer, and automator.
         <br></br>
         <br></br>
         I studied Physics and Mathematics while at University and in the process found a passion for coding. 
-        I enjoy software development, web hosting, home networking, hardware repair, automations, and basically anything that has to do with technology and science.
         <br></br>
         <br></br>
-        My blog posts will consist mostly of projects I've worked on, both software and hardware, IT tips, and many other science and nerd culture topics that my friends come up with.
+        At home I enjoy self-hosting many services that include, Plex (media streaming), Homeassistant (home automation), Jenkins(CI/CD pipeline), Frigate (NVR with Object Recognition), Factorio (video game server) and many more.  
         <br></br>
         <br></br>
-        In my spare time I enjoy playing video games, watching sports (Go Spurs Go!), and working on my home automation setup.
+        I enjoy working in the AWS cloud environment and have been since 2015. This site is hosted serverlessly in an S3 bucket and deployed through the previously mentioned Jenkins pipeline, using Terraform.
         <br></br>
         </p>
       </div>
