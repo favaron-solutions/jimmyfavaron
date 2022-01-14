@@ -41,6 +41,7 @@ pipeline {
       steps {
         sh '''
           apt-get install -y nodejs
+          npm run build
           '''
         // sh '''
         //   DISTRO="$(lsb_release -s -c)"
