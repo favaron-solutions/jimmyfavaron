@@ -40,7 +40,7 @@ pipeline {
     stage('build production application') {
       steps {
         sh '''
-          apt-get install -y nodejs
+          apt-get install -y nodejs npm
           npm run build
           '''
         // sh '''
