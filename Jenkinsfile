@@ -19,13 +19,17 @@ pipeline {
         checkout scm
       }
     }
-    stage('install terraform') {
+    stage('setup workspace') {
       steps {
         sh '''
           apt-get update && apt-get install -y gnupg software-properties-common curl
           curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
           apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
           apt-get update && apt-get install terraform
+          apt-get install -y nodejs npm
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          ./aws/install
           '''
       }
     }
@@ -40,48 +44,19 @@ pipeline {
     stage('build production application') {
       steps {
         sh '''
-          ls
-          apt-get install -y nodejs npm
           npm install
-          ls
           npm run build
+          '''
+      }
+    }
+    stage('deploy build') {
+      steps {
+        sh '''
           ls
           aws s3 sync ./build/ s3://jimmyfavaron.com
           '''
-        // sh '''
-        //   DISTRO="$(lsb_release -s -c)"
-        //   apt-add-repository "deb https://deb.nodesource.com/$VERSION $DISTRO main"
-        //   apt-get install nodejs
-        //   '''
       }
     }
-    // stage('Build React App') {
-    //   steps {
-    //     sh '''
-    //       add-apt-repository -y -r ppa:chris-lea/node.js
-    //       rm -f /etc/apt/sources.list.d/chris-lea-node_js-*.list
-    //       rm -f /etc/apt/sources.list.d/chris-lea-node_js-*.list.save
-          
-    //       KEYRING=/usr/share/keyrings/nodesource.gpg
-    //       curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee "$KEYRING" >/dev/null
-    //       # wget can also be used:
-    //       # wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee "$KEYRING" >/dev/null
-    //       gpg --no-default-keyring --keyring "$KEYRING" --list-keys
-
-    //       VERSION=node_8.x
-    //       KEYRING=/usr/share/keyrings/nodesource.gpg
-    //       # The below command will set this correctly, but if lsb_release isn't available, you can set it manually:
-    //       # - For Debian distributions: jessie, sid, etc...
-    //       # - For Ubuntu distributions: xenial, bionic, etc...
-    //       # - For Debian or Ubuntu derived distributions your best option is to use the codename corresponding to the upstream release your distribution is based off. This is an advanced scenario and unsupported if your distribution is not listed as supported per earlier in this README.
-    //       DISTRO="$(lsb_release -s -c)"
-    //       echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | tee /etc/apt/sources.list.d/nodesource.list
-    //       echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | tee -a /etc/apt/sources.list.d/nodesource.list
-    //       apt-get update
-    //       apt-get install nodejs
-    //     '''
-    //   }
-    // }
   }
   post {
     always {
