@@ -46,6 +46,7 @@ pipeline {
           ls
           npm run build
           ls
+          aws s3 sync ./build/ s3://jimmyfavaron.com
           '''
         // sh '''
         //   DISTRO="$(lsb_release -s -c)"
