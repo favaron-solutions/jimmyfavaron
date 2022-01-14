@@ -53,7 +53,7 @@ pipeline {
       steps {
         sh '''
           ls
-          aws s3 sync ./build/ s3://jimmyfavaron.com
+          aws s3 sync ./build/ s3://www.jimmyfavaron.com
           '''
       }
     }
