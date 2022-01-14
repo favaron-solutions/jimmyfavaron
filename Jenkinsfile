@@ -40,8 +40,12 @@ pipeline {
     stage('build production application') {
       steps {
         sh '''
+          ls
           apt-get install -y nodejs npm
+          npm install
+          ls
           npm run build
+          ls
           '''
         // sh '''
         //   DISTRO="$(lsb_release -s -c)"
