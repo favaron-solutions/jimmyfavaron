@@ -21,19 +21,32 @@ pipeline {
     }
     stage('install terraform') {
       steps {
-        // sh 'ls /etc/apt/sources.list.d'
-        // sh 'rm /etc/apt/sources.list.d/nodesource.list'
-        // sh 'ls /etc/apt/sources.list.d'
-        sh 'apt-get update && apt-get install -y gnupg software-properties-common curl'
-        sh 'curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -'
-        sh 'apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"'
-        sh 'apt-get update && apt-get install terraform'
+        sh '''
+          apt-get update && apt-get install -y gnupg software-properties-common curl
+          curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
+          apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+          apt-get update && apt-get install terraform
+          '''
       }
     }
     stage('use terraform') {
       steps {
-        sh 'terraform init -no-color'
-        sh 'terraform apply -auto-approve -no-color'
+        sh '''
+          terraform init -no-color
+          terraform apply -auto-approve -no-color
+          '''
+      }
+    }
+    stage('build production application') {
+      steps {
+        sh '''
+          apt-get install nodejs
+          '''
+        // sh '''
+        //   DISTRO="$(lsb_release -s -c)"
+        //   apt-add-repository "deb https://deb.nodesource.com/$VERSION $DISTRO main"
+        //   apt-get install nodejs
+        //   '''
       }
     }
     // stage('Build React App') {
