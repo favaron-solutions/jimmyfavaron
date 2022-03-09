@@ -29,4 +29,4 @@ Feel free to reach out if you get stuck.
 ## AWS Deployment
 This is the current way I edit, deploy, and backup the site.
 
-![alt text](https://github.com/jfavaron/jimmyfavaron/blob/master/src/assets/ci-cd.svg?raw=true)
+![alt text](https://github.com/jfavaron/jimmyfavaron/blob/master/src/assets/ci-cd.png?raw=true)
