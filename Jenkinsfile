@@ -33,7 +33,7 @@ pipeline {
           '''
       }
     }
-    stage('use terraform') {
+    stage('use terraform to deploy infrastructure') {
       steps {
         sh '''
           terraform init -no-color
