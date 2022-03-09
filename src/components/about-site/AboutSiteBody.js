@@ -10,11 +10,6 @@ export default class AboutSiteBody extends React.Component {
       <Container>
         <PageTitle pageTitle={this.props.pageTitle}/>
         <Divider/>
-        <div className="d-flex justify-content-center">
-        <p>heyo</p>       
-        <img id="cicd-pipeline" src={cicd} alt=""/>
-        <p>testing</p>
-        </div>
         <Divider/>
       </Container>
     );

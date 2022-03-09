@@ -35,10 +35,8 @@ export default class Navigation extends React.Component {
                 <Link className="nav-link" to="/projects">Projects</Link>
               </NavItem>
               <NavItem>
-                <Link className="nav-link" to="/blog">My Blog</Link>
-              </NavItem>
-              <NavItem>
-                <Link className="nav-link" to="/aboutSite">About This Site</Link>
+                {/* <Link className="nav-link" to="/blog">My Blog</Link> */}
+                <a className="nav-link" href="https://github.com/jfavaron/jimmyfavaron"><i className="fa fa-github"></i><span> Github</span></a>
               </NavItem>
             </Nav>
           </Collapse>

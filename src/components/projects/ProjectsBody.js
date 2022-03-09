@@ -29,6 +29,9 @@ export default class ProjectsBody extends React.Component {
               <br></br>
               <CardText>Originally built in 2018, the 2022 refactor has brought automated CI/CD deployment and some content changes</CardText>
               <a href="https://www.jimmyfavaron.com"><Button> Home </Button></a>
+              <br></br>
+              <br></br>
+              <a href="https://github.com/jfavaron/jimmyfavaron"><Button> Github </Button></a>
             </CardBody>
           </Card>    
           <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
@@ -39,9 +42,9 @@ export default class ProjectsBody extends React.Component {
               <br></br>
               <CardText>Frigate is a self hosted application leveraging IP feeds from cameras on the local network. It has the ability to send screenshots to a Coral TPU for object recognition and detection.</CardText>
               <a href="https://github.com/blakeblackshear/frigate"><Button> Author's Github </Button></a>
+              {/* <br></br>
               <br></br>
-              <br></br>
-              <a href="https://www.jimmyfavaron.com/blog"><Button> Blog Post (placeholder) </Button></a>
+              <a href="https://www.jimmyfavaron.com/blog"><Button> Blog Post (placeholder) </Button></a> */}
             </CardBody>
           </Card>                  
         </CardColumns>

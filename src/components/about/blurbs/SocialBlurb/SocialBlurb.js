@@ -6,7 +6,7 @@ export default class SocialBlurb extends React.Component {
     return (
       <div className="social-blurb">
         <Row>
-          <a className="aStyle" href="https://github.com/jfavaron"><i className="fa fa-github"></i><span> Github </span></a>
+          <a className="aStyle" href="https://github.com/jfavaron/jimmyfavaron"><i className="fa fa-github"></i><span> Github Repository</span></a>
         </Row>
         <Row>
           <a className="aStyle" href="https://www.linkedin.com/in/james-favaron-279a16ab/"><i className="fa fa-linkedin"></i><span> LinkedIn </span></a>
@@ -15,7 +15,7 @@ export default class SocialBlurb extends React.Component {
           <i className="fa fa-envelope icon-space"></i><span className="icon-spacer"> jimmyfavaron@gmail.com </span>
         </Row>
         <Row>
-          <i className="fa fa-phone icon-space"></i><span className="icon-spacer"> (830) 928-4747 </span>
+          <i className="fa fa-phone icon-space"></i><span className="icon-spacer"> (801) 420-2701 </span>
         </Row>
       </div>
     );
