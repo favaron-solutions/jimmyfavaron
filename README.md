@@ -30,6 +30,7 @@ Spin up the react application.
 
 ```npm start```
 
+
 At this point your default browser should automatically be opened to the homepage. 
 
 Feel free to reach out if you get stuck.
