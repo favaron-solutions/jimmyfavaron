@@ -15,13 +15,21 @@ Requirements:
 - [nodejs and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed
 
 Download the code
+
 ```git clone https://github.com/jfavaron/jimmyfavaron.git```
+
 Navigate into the code directory
+
 ```cd jimmyfavaron```
+
 Install dependencies for the project
+
 ```npm install```
+
 Spin up the react application.
+
 ```npm start```
+
 At this point your default browser should automatically be opened to the homepage. 
 
 Feel free to reach out if you get stuck.
