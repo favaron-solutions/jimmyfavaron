@@ -13,8 +13,13 @@ terraform {
       source  = "hashicorp/aws"
       version = ">= 4.60.0"
     }
+    ansible = {
+      version = "1.1.0"
+      source  = "ansible/ansible"
+    }
   }
 }
+
 
 # Default AWS Provider
 provider "aws" {
