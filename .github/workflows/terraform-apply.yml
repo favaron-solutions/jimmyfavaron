@@ -24,14 +24,14 @@ jobs:
         uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
         id: apply-upload
         with:
-          workspace: $TF_WORKSPACE
-          directory: $TF_CODE_DIRECTORY
+          workspace: ${{ vars.TF_WORKSPACE }}
+          directory: ${{ vars.TF_CODE_DIRECTORY }}
 
       - name: Create Apply Run
         uses: hashicorp/tfc-workflows-github/actions/create-run@v1.0.0
         id: apply-run
         with:
-          workspace: $TF_WORKSPACE
+          workspace: ${{ vars.TF_WORKSPACE }}
           configuration_version: ${{ steps.apply-upload.outputs.configuration_version_id }}
 
       - name: Apply
