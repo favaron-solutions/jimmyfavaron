@@ -7,6 +7,10 @@ on:
 
 env:
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
+  TF_CLOUD_ORGANIZATION: ${{ vars.TF_CLOUD_ORGANIZATION }}
+  TF_WORKSPACE: ${{ vars.TF_WORKSPACE }}
+  CONFIG_DIRECTORY: ${{ vars.TF_CODE_DIRECTORY }}
+  S3_BUCKET: ${{ vars.S3_BUCKET }}
 
 jobs:
   terraform:
@@ -24,14 +28,14 @@ jobs:
         uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
         id: apply-upload
         with:
-          workspace: ${{ vars.TF_WORKSPACE }}
-          directory: ${{ vars.TF_CODE_DIRECTORY }}
+          workspace: ${{ env.TF_WORKSPACE }}
+          directory: ${{ env.TF_CODE_DIRECTORY }}
 
       - name: Create Apply Run
         uses: hashicorp/tfc-workflows-github/actions/create-run@v1.0.0
         id: apply-run
         with:
-          workspace: ${{ vars.TF_WORKSPACE }}
+          workspace: ${{ env.TF_WORKSPACE }}
           configuration_version: ${{ steps.apply-upload.outputs.configuration_version_id }}
 
       - name: Apply
