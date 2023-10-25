@@ -1,19 +1,28 @@
 terraform {
+  required_version = ">= 1.0.11"
+
+  cloud {
+    organization = "favaron-solutions"
+
+    workspaces {
+      name = "jimmyfavaron-site"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.0"
+      version = ">= 4.60.0"
     }
-  }
-
-  backend "s3" {
-    bucket = "fava-tf-backend"
-    key = "dev/terraform.tfstate"
-    region = "us-east-1"
   }
 }
 
-# Configure the AWS Provider
+# Default AWS Provider
 provider "aws" {
   region = "us-east-1"
+}
+
+# AWS Provider with "default" alias for module
+provider "aws" {
+  region = "us-east-1"
+  alias  = "module"
 }
