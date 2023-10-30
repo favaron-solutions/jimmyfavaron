@@ -3,7 +3,6 @@
 ## Tech Stack
 * [React](https://reactjs.org/docs/getting-started.html)
 * [Terraform](https://www.terraform.io/docs)
-* ~~[Jenkins](https://www.jenkins.io/doc/)~~
 * [AWS S3](https://docs.aws.amazon.com/s3/index.html)
 * [AWS Cloudfront](https://docs.aws.amazon.com/cloudfront/index.html)
 * [AWS Route53](https://docs.aws.amazon.com/route53/)
@@ -25,7 +24,3 @@ The development container should be built from the code in `.devcontainer/devcon
 
 ## AWS Deployment
 Now the entire site is deployed using Github Actions and Terraform Cloud. Check out the `.github` directory for the workflows.
-
-~~This is the current way I edit, deploy, and backup the site.~~
-
-~~![alt text](https://github.com/jfavaron/jimmyfavaron/blob/master/src/assets/ci-cd.png?raw=true)~~
