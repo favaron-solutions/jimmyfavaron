@@ -3,38 +3,29 @@
 ## Tech Stack
 * [React](https://reactjs.org/docs/getting-started.html)
 * [Terraform](https://www.terraform.io/docs)
-* [Jenkins](https://www.jenkins.io/doc/)
+* ~~[Jenkins](https://www.jenkins.io/doc/)~~
 * [AWS S3](https://docs.aws.amazon.com/s3/index.html)
 * [AWS Cloudfront](https://docs.aws.amazon.com/cloudfront/index.html)
 * [AWS Route53](https://docs.aws.amazon.com/route53/)
 
-## Local Deployment
-If you want to deploy it locally then you need to execute the following commands.
-Requirements:
-- [git](https://git-scm.com/doc) installed
-- [nodejs and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed
-
+## Local Deployment in VS Code Development Container
 Download the code
 
 ```git clone https://github.com/jfavaron/jimmyfavaron.git```
 
-Navigate into the code directory
+Hit `F1` to open the command palette
 
-```cd jimmyfavaron```
+Search for 
 
-Install dependencies for the project
+```Dev Containers: Open Folder in Container...```
 
-```npm install```
+and select the `jimmyfavaron` directory.
 
-Spin up the react application.
-
-```npm start```
-
-At this point your default browser should automatically be opened to the homepage. 
-
-Feel free to reach out if you get stuck.
+The development container should be built from the code in `.devcontainer/devcontainer.json`
 
 ## AWS Deployment
-This is the current way I edit, deploy, and backup the site.
+Now the entire site is deployed using Github Actions and Terraform Cloud. Check out the `.github` directory for the workflows.
 
-![alt text](https://github.com/jfavaron/jimmyfavaron/blob/master/src/assets/ci-cd.png?raw=true)
+~~This is the current way I edit, deploy, and backup the site.~~
+
+~~![alt text](https://github.com/jfavaron/jimmyfavaron/blob/master/src/assets/ci-cd.png?raw=true)~~
