@@ -1,17 +1,17 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
-	"name": "React Base Test",
+	"name": "Gatsby Base Test",
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:18-bullseye",
 	"hostRequirements": {
 		"cpus": 4
 	},
 
 	"waitFor": "onCreateCommand",
-	"updateContentCommand": "npm install -g npm", // Install Gatsby CLI
+	"updateContentCommand": "npm install -g gatsby-cli", // Install Gatsby CLI
 	"postCreateCommand": "npm install",
 	"postAttachCommand": {
-		"server": "npm start"
+		"server": "gatsby develop -H 0.0.0.0"
 	},
 	
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -24,22 +24,22 @@
 		"stylelint.vscode-stylelint"
 	],
 
-	// // Configure tool-specific properties. More info: https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/automatically-opening-files-in-the-codespaces-for-a-repository#setting-files-to-be-opened-automatically
-	// "customizations": {
-	// 	"codespaces": {
-	// 		"openFiles": [
-	// 			"src/pages/index.js"
-	// 		]
-	// 	}
-	// },
+	// Configure tool-specific properties. More info: https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/automatically-opening-files-in-the-codespaces-for-a-repository#setting-files-to-be-opened-automatically
+	"customizations": {
+		"codespaces": {
+			"openFiles": [
+				"src/pages/index.js"
+			]
+		}
+	},
 
 	// Trigger actions on ports. More info: https://containers.dev/implementors/json_reference/#port-attributes
 	"portsAttributes": {
-		"3000": {
+		"8000": {
 			"label": "Application",
 			"onAutoForward": "openPreview"
 		}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000]
+	"forwardPorts": [8000]
 }
