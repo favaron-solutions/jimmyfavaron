@@ -41,8 +41,8 @@ src/
   templates/
     using-dsg.js          STARTER PLACEHOLDER — to be removed (also remove createPage in gatsby-node.js)
   images/
-    favicon.ico           Site favicon
-    gatsby-icon.png       Gatsby icon (from starter)
+    favicon.ico           Site favicon (not usable by gatsby-plugin-manifest — sharp doesn't support ico)
+    gatsby-icon.png       Gatsby icon (used as manifest icon)
     example.png           Example image (from starter)
 .github/workflows/
   terraform-plan.yml      PR workflow: Terraform plan + PR comment
@@ -53,12 +53,18 @@ src/
 
 ## Build & Deploy Pipeline
 
-**Branch strategy:** `dev` (development) → PR to `master` → merge triggers deploy
+**Branch strategy:** `dev` (development) → PR to `main` → merge triggers deploy
 
 - **On PR:** `terraform-plan.yml` runs a speculative Terraform plan and posts results as a PR comment
 - **On push to main:** `terraform-apply.yml` applies Terraform changes, builds Gatsby, and syncs `public/` to the S3 bucket
 - **AWS auth:** OIDC via `github-actions-role` (account 043873863297)
 - **Terraform Cloud:** org `favaron-solutions`, workspace `jimmyfavaron-site`
+
+**GitHub repo:** `favaron-solutions/jimmyfavaron` (default branch: `main`)
+
+**GitHub Actions variables:** `TF_CLOUD_ORGANIZATION`, `TF_WORKSPACE`, `TF_CODE_DIRECTORY`, `S3_BUCKET` (just the bucket name, no `s3://` prefix — the workflow adds it)
+
+**GitHub Actions secrets:** `TF_API_TOKEN` (Terraform Cloud org-level API token, shared across repos)
 
 Do not modify Terraform files (`*.tf`, `terraform.tfvars`) unless specifically asked. Infrastructure changes require coordination with Terraform Cloud.
 
@@ -92,12 +98,14 @@ Key CSS variables: `--color-primary: #7026b9`, `--space-1` through `--space-6` (
 
 ## Known Issues
 
-- **Broken image ref:** `src/pages/index.js` references `../images/sample-image.jpg` which does not exist
+- **Broken image ref:** `src/pages/index.js` references `../images/sample-image.jpg` which does not exist (build warns but succeeds)
 - **Deprecated dependency:** `gatsby-image` (v3.11.0) is in package.json but unused — should be removed
 - **Starter metadata:** `package.json` name, author, repository, and bugs fields still reference gatsby-starter-default
 - **Unused header:** `src/components/header.js` exists but is not imported by `layout.js` (layout has its own inline header)
 - **CSS conflict:** `layout.css` sets `--color-text: #333` (light theme default) which conflicts with the dark background in `layout.js`
 - **No tests:** Test script is a placeholder echo — no test framework configured
+- **Remaining dep vulnerabilities:** 34 vulnerabilities in Gatsby's transitive dependencies — cannot be fixed without downgrading Gatsby to v3. Do not run `npm audit fix --force`.
+- **Sharp native module:** `sharp` is a direct dependency for Apple Silicon compatibility. After `npm install`, if builds fail with sharp errors, run `npm install --platform=darwin --arch=arm64v8 sharp` or do a clean `rm -rf node_modules && npm install`.
 
 ## Infrastructure Reference
 
