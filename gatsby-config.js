@@ -3,10 +3,10 @@ module.exports = {
     title: `Jimmy Favaron`,
     description: `A portfolio site for Jimmy Favaron`,
     author: `Jimmy Favaron`,
-    siteUrl: `https://www.jimmyfavaron.com`,  // replace with your site URL
+    siteUrl: `https://www.jimmyfavaron.com`, // replace with your site URL
   },
   plugins: [
-    `gatsby-transformer-sharp`, 
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     {

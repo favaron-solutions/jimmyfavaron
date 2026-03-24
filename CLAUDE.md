@@ -99,12 +99,10 @@ Key CSS variables: `--color-primary: #7026b9`, `--space-1` through `--space-6` (
 ## Known Issues
 
 - **Broken image ref:** `src/pages/index.js` references `../images/sample-image.jpg` which does not exist (build warns but succeeds)
-- **Deprecated dependency:** `gatsby-image` (v3.11.0) is in package.json but unused — should be removed
-- **Starter metadata:** `package.json` name, author, repository, and bugs fields still reference gatsby-starter-default
 - **Unused header:** `src/components/header.js` exists but is not imported by `layout.js` (layout has its own inline header)
 - **CSS conflict:** `layout.css` sets `--color-text: #333` (light theme default) which conflicts with the dark background in `layout.js`
 - **No tests:** Test script is a placeholder echo — no test framework configured
-- **Remaining dep vulnerabilities:** 34 vulnerabilities in Gatsby's transitive dependencies — cannot be fixed without downgrading Gatsby to v3. Do not run `npm audit fix --force`.
+- **Remaining dep vulnerabilities:** 34 vulnerabilities in Gatsby's transitive build-time dependencies — cannot be fixed without downgrading Gatsby to v3. All are build-only, zero runtime risk for this static site. Do not run `npm audit fix --force`.
 - **Sharp native module:** `sharp` is a direct dependency for Apple Silicon compatibility. After `npm install`, if builds fail with sharp errors, run `npm install --platform=darwin --arch=arm64v8 sharp` or do a clean `rm -rf node_modules && npm install`.
 
 ## Infrastructure Reference
