@@ -48,14 +48,11 @@ jobs:
       
       - name: Use Node.js
         uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
       - name: build
-        run: |
-          ls -la
-          npm install -g gatsby-cli
-          npm ci
-          gatsby build
-          ls -la
+        run: npm install && CI=false npm run build
 
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -64,6 +61,14 @@ jobs:
           role-session-name: githubActionsSession
           aws-region: us-east-1
 
-      - name:  Sync Bucket
+      - name: Sync Bucket
         run: |
-          aws s3 sync public/ s3://${{ env.S3_BUCKET }}/
+          aws s3 sync build/ s3://${{ env.S3_BUCKET }}/
+
+      - name: Invalidate CloudFront cache
+        continue-on-error: true
+        run: |
+          DIST_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Aliases.Items[?contains(@, 'jimmyfavaron.com')]].Id" --output text)
+          if [ -n "$DIST_ID" ]; then
+            aws cloudfront create-invalidation --distribution-id $DIST_ID --paths '/*'
+          fi
