@@ -66,6 +66,7 @@ jobs:
           aws s3 sync build/ s3://${{ env.S3_BUCKET }}/
 
       - name: Invalidate CloudFront cache
+        continue-on-error: true
         run: |
           aws cloudfront create-invalidation --distribution-id E2LEEGSMQQIZC5 --paths '/*'
           aws cloudfront create-invalidation --distribution-id E1Z9JAATCDZSDH --paths '/*'
