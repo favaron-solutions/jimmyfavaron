@@ -66,9 +66,6 @@ jobs:
           aws s3 sync build/ s3://${{ env.S3_BUCKET }}/
 
       - name: Invalidate CloudFront cache
-        continue-on-error: true
         run: |
-          DIST_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Aliases.Items[?contains(@, 'jimmyfavaron.com')]].Id" --output text)
-          if [ -n "$DIST_ID" ]; then
-            aws cloudfront create-invalidation --distribution-id $DIST_ID --paths '/*'
-          fi
+          aws cloudfront create-invalidation --distribution-id E2LEEGSMQQIZC5 --paths '/*'
+          aws cloudfront create-invalidation --distribution-id E1Z9JAATCDZSDH --paths '/*'
