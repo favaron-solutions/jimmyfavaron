@@ -94,7 +94,7 @@ Client-side routing means all paths serve `index.html` (handled by CloudFront/S3
 
 - **AWS:** Account 043873863297, region us-east-1
 - **Hosting:** S3 bucket `jimmyfavaron.com` + CloudFront CDN + Route53 DNS
-- **CloudFront distributions:** E2LEEGSMQQIZC5, E1Z9JAATCDZSDH
+- **CloudFront distribution:** EP0EUIYXJ9PJI (jimmyfavaron.com)
 - **Terraform modules:** `cn-terraform/s3-static-website/aws` v1.0.8, `cn-terraform/logs-s3-bucket/aws` v1.0.6
 - **State:** Managed in Terraform Cloud -- do not run `terraform` locally without `TF_API_TOKEN`
 - `.terraform/` and `.terraform.lock.hcl` are gitignored
